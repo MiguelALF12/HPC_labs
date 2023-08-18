@@ -1,0 +1,5 @@
+# ninja log v5
+2	153	1692330346545471183	CMakeFiles/matrixMultiplication.dir/main.c.o	d39dc4c13e7da9b5
+1	144	1692330406930925302	build.ninja	83b71a211850043d
+1	236	1692330393500640154	CMakeFiles/matrixMultiplication.dir/functions/matrixMultiplication.c.o	3b938f179a4079df
+241	336	1692330393600946424	matrixMultiplication	ce717ea9979e2595
