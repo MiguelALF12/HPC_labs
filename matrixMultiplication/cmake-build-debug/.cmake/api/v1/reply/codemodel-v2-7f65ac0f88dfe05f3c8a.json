@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/miguellopez/Desktop/UNIVERSIDAD/SEMESTRE 9/HPC/codeV2/matrixMultiplication/cmake-build-debug",
-		"source" : "/Users/miguellopez/Desktop/UNIVERSIDAD/SEMESTRE 9/HPC/codeV2/matrixMultiplication"
+		"build" : "/Users/miguellopez/Desktop/UNIVERSIDAD/Projects/HPC-code/matrixMultiplication/cmake-build-debug",
+		"source" : "/Users/miguellopez/Desktop/UNIVERSIDAD/Projects/HPC-code/matrixMultiplication"
 	},
 	"version" : 
 	{

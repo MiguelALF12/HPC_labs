@@ -1,16 +1,5 @@
 # ninja log v5
-2	153	1692330346545471183	CMakeFiles/matrixMultiplication.dir/main.c.o	d39dc4c13e7da9b5
-1	144	1692330936001471847	build.ninja	83b71a211850043d
-1	236	1692330393500640154	CMakeFiles/matrixMultiplication.dir/functions/matrixMultiplication.c.o	3b938f179a4079df
-241	336	1692330393600946424	matrixMultiplication	ce717ea9979e2595
-9	733	1692331488350675278	CMakeFiles/matrixMultiplication.dir/main.c.o	d39dc4c13e7da9b5
-11	745	1692331488365451951	CMakeFiles/matrixMultiplication.dir/functions/matrixMultiplication.c.o	3b938f179a4079df
-747	886	1692331488508010730	matrixMultiplication	ce717ea9979e2595
-1	4795	1692743786946075710	CMakeFiles/matrixMultiplication.dir/main.c.o	d39dc4c13e7da9b5
-2	4802	1692743786954841204	CMakeFiles/matrixMultiplication.dir/functions/matrixMultiplication.c.o	3b938f179a4079df
-4803	5293	1692743787448404965	matrixMultiplication	ce717ea9979e2595
-6	183	1692744298185836524	CMakeFiles/matrixMultiplication.dir/main.c.o	d39dc4c13e7da9b5
-11	187	1692744298188956778	CMakeFiles/matrixMultiplication.dir/functions/matrixMultiplication.c.o	3b938f179a4079df
-187	316	1692744298324652039	matrixMultiplication	ce717ea9979e2595
-2	234	1692747308876575348	CMakeFiles/matrixMultiplication.dir/functions/matrixMultiplication.c.o	3b938f179a4079df
-235	369	1692747309011468703	matrixMultiplication	ce717ea9979e2595
+2	121	1692992626412188286	CMakeFiles/matrixMultiplication.dir/main.c.o	d39dc4c13e7da9b5
+1	144	1693596657268945786	build.ninja	83b71a211850043d
+2	136	1692994138170767280	CMakeFiles/matrixMultiplication.dir/functions/matrixMultiplication.c.o	3b938f179a4079df
+136	234	1692994138269817709	matrixMultiplication	ce717ea9979e2595

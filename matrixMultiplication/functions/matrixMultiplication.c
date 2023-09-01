@@ -75,11 +75,10 @@ int randomNumber(){
 void multiplyMatrixesV3(const int *size,const int *verbose){
 //    srand(time(0));
     clock_t t;
-    t = clock();
+
 
     //Dynamic memory allocation
-//    int a[*size][*size], b[*size][*size], c[*size][*size], n, i, j, k;
-    int n, i, j, k;
+    int i, j, k;
     int(*a)[*size][*size] = malloc(sizeof *a);
     int(*b)[*size][*size] = malloc(sizeof *b);
     int(*c)[*size][*size] = malloc(sizeof *c);
@@ -93,12 +92,16 @@ void multiplyMatrixesV3(const int *size,const int *verbose){
             (*b)[i][j] = randomNumber();
         }
     }
+
+    t = clock();
     // Multiply th matrixes
-    for (i = 0; i < n; i++) {
-        for (j = 0; j < n; j++) {
+    for (i = 0; i < *size; i++) {
+        for (j = 0; j < *size; j++) {
             (*c)[i][j] = 0;
-            for (k = 0; k < n; k++) {
+            for (k = 0; k < *size; k++) {
+//                printf("%d * %d = %d\n",(*c)[i][j], (*a)[i][k], (*b)[k][j] );
                 (*c)[i][j] += (*a)[i][k] * (*b)[k][j];
+//                printf("%d\n",(*c)[i][j]);
             }
         }
     }
@@ -130,7 +133,7 @@ void multiplyMatrixesV3(const int *size,const int *verbose){
         }
     }
 
-    printf("(%d) The multiplication took %f seconds to execute \n", *size,time_taken);
+    printf("(%d):%f; \n", *size,time_taken);
     free(a);
     free(b);
     free(c);

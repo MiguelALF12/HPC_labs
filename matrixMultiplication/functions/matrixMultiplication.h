@@ -4,6 +4,5 @@
 
 #ifndef CODE_MATRIXMULTIPLICATION_H
 #define CODE_MATRIXMULTIPLICATION_H
-void multiplyMatrixesV2(int *, int *);
 void multiplyMatrixesV3(const int *, const int *);
 #endif //CODE_MATRIXMULTIPLICATION_H

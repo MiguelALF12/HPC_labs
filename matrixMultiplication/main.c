@@ -11,7 +11,6 @@ int main(int argc, char *argv[]){
         verbose = 1;
     }
 
-//    multiplyMatrixesV2(&size, &verbose);
     multiplyMatrixesV3(&size, &verbose);
 
     return 0;
