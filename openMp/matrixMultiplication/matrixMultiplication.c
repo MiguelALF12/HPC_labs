@@ -103,12 +103,10 @@ void multiplyMatrixesOmp(const int *size,const int *verbose){
 
     start = omp_get_wtime();
 //    printf("max_num_threads: %d \n", omp_get_max_threads());
-    #pragma omp parallel for private(j,k)
     for  (int i = 0; i < *size; i++) {
-//        int thread_id = omp_get_thread_num();  // Obtener el ID del hilo actual
-//        printf("Hilo %d de %d en ejecución.\n", thread_id, omp_get_num_threads());
         for (int j = 0; j < *size; j++) {
             (*c)[i][j] = 0;
+            #pragma omp parallel for private(i, j)
             for (int k = 0; k < *size; k++) {
                 (*c)[i][j] += (*a)[i][k] * (*b)[k][j];
             }

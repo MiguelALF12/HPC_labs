@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "openMp::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-openMp-81ae14f75ec1e53b7e18.json",
+					"jsonFile" : "target-openMp-f9d095f4847555070a39.json",
 					"name" : "openMp",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/miguellopez/Desktop/UNIVERSIDAD/Projects/HPC-projects/openMp/cmake-build-openmp",
-		"source" : "/Users/miguellopez/Desktop/UNIVERSIDAD/Projects/HPC-projects/openMp"
+		"build" : "/root/HPC_labs/openMp/cmake-build-openmp",
+		"source" : "/root/HPC_labs/openMp"
 	},
 	"version" : 
 	{

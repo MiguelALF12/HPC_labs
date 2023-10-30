@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 for numThread in 5 15 25; do
   export OMP_NUM_THREADS=$numThread
@@ -7,7 +7,7 @@ for numThread in 5 15 25; do
   do
     for matrixSize in 300 600 900 1200 1500 1800 2100 2400 2700 3000;
         do
-           ./cmake-build-openmp/openMp $matrixSize >> firstLoop/$name
+           ./cmake-build-openmp/openMp $matrixSize >> thirdLoop/$name
         done
   done
 

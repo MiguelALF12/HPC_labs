@@ -10,11 +10,15 @@
 	{
 		"commands" : 
 		[
-			"add_executable"
+			"add_executable",
+			"set_property",
+			"find_package",
+			"target_link_libraries"
 		],
 		"files" : 
 		[
-			"CMakeLists.txt"
+			"CMakeLists.txt",
+			"/root/.cache/JetBrains/RemoteDev/dist/daa08baf5ffde_CLion-2023.1.5/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindOpenMP.cmake"
 		],
 		"nodes" : 
 		[
@@ -26,6 +30,28 @@
 				"file" : 0,
 				"line" : 7,
 				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 9,
+				"parent" : 0
+			},
+			{
+				"file" : 1,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 621,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 11,
+				"parent" : 0
 			}
 		]
 	},
@@ -35,7 +61,11 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.7 -fcolor-diagnostics"
+					"fragment" : "-fdiagnostics-color=always"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fopenmp"
 				}
 			],
 			"language" : "C",
@@ -60,12 +90,18 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
+				"fragment" : "",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "",
-				"role" : "flags"
+				"backtrace" : 4,
+				"fragment" : "/usr/lib/gcc/x86_64-linux-gnu/13/libgomp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libpthread.a",
+				"role" : "libraries"
 			}
 		],
 		"language" : "C"

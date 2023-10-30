@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "/usr/local/Cellar/gcc/13.2.0/bin/gcc-13")
+set(CMAKE_C_COMPILER "/usr/bin/gcc-13")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_COMPILER_VERSION "13.2.0")
@@ -13,19 +13,18 @@ set(CMAKE_C11_COMPILE_FEATURES "c_std_11;c_static_assert")
 set(CMAKE_C17_COMPILE_FEATURES "c_std_17")
 set(CMAKE_C23_COMPILE_FEATURES "c_std_23")
 
-set(CMAKE_C_PLATFORM_ID "Darwin")
+set(CMAKE_C_PLATFORM_ID "Linux")
 set(CMAKE_C_SIMULATE_ID "")
 set(CMAKE_C_COMPILER_FRONTEND_VARIANT "")
 set(CMAKE_C_SIMULATE_VERSION "")
 
-set(CMAKE_C_COMPILER_SYSROOT "/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/usr")
-set(CMAKE_COMPILER_SYSROOT "/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/usr")
+
 
 
 set(CMAKE_AR "/usr/bin/ar")
-set(CMAKE_C_COMPILER_AR "/usr/local/Cellar/gcc/13.2.0/bin/gcc-ar-13")
+set(CMAKE_C_COMPILER_AR "/usr/bin/gcc-ar-13")
 set(CMAKE_RANLIB "/usr/bin/ranlib")
-set(CMAKE_C_COMPILER_RANLIB "/usr/local/Cellar/gcc/13.2.0/bin/gcc-ranlib-13")
+set(CMAKE_C_COMPILER_RANLIB "/usr/bin/gcc-ranlib-13")
 set(CMAKE_LINKER "/usr/bin/ld")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCC 1)
@@ -42,9 +41,9 @@ set(CMAKE_C_LINKER_PREFERENCE 10)
 
 # Save compiler ABI information.
 set(CMAKE_C_SIZEOF_DATA_PTR "8")
-set(CMAKE_C_COMPILER_ABI "")
+set(CMAKE_C_COMPILER_ABI "ELF")
 set(CMAKE_C_BYTE_ORDER "LITTLE_ENDIAN")
-set(CMAKE_C_LIBRARY_ARCHITECTURE "")
+set(CMAKE_C_LIBRARY_ARCHITECTURE "x86_64-linux-gnu")
 
 if(CMAKE_C_SIZEOF_DATA_PTR)
   set(CMAKE_SIZEOF_VOID_P "${CMAKE_C_SIZEOF_DATA_PTR}")
@@ -55,7 +54,7 @@ if(CMAKE_C_COMPILER_ABI)
 endif()
 
 if(CMAKE_C_LIBRARY_ARCHITECTURE)
-  set(CMAKE_LIBRARY_ARCHITECTURE "")
+  set(CMAKE_LIBRARY_ARCHITECTURE "x86_64-linux-gnu")
 endif()
 
 set(CMAKE_C_CL_SHOWINCLUDES_PREFIX "")
@@ -64,10 +63,10 @@ if(CMAKE_C_CL_SHOWINCLUDES_PREFIX)
 endif()
 
 
-set(CMAKE_C_SYSROOT_FLAG "-isysroot")
-set(CMAKE_C_OSX_DEPLOYMENT_TARGET_FLAG "-mmacosx-version-min=")
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/usr/local/Cellar/gcc/13.2.0/lib/gcc/current/gcc/x86_64-apple-darwin21/13/include;/usr/local/Cellar/gcc/13.2.0/lib/gcc/current/gcc/x86_64-apple-darwin21/13/include-fixed;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks")
-set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "emutls_w;gcc")
-set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/usr/local/Cellar/gcc/13.2.0/lib/gcc/current/gcc/x86_64-apple-darwin21/13;/usr/local/Cellar/gcc/13.2.0/lib/gcc/current/gcc;/usr/local/Cellar/gcc/13.2.0/lib/gcc/current;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/lib")
-set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks")
+
+
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/usr/lib/gcc/x86_64-linux-gnu/13/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include")
+set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "gcc;gcc_s;c;gcc;gcc_s")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/usr/lib/gcc/x86_64-linux-gnu/13;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib")
+set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
