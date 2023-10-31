@@ -1,3 +1,0 @@
-/root/HPC_labs/openMp/cmake-build-openmp/CMakeFiles/openMp.dir
-/root/HPC_labs/openMp/cmake-build-openmp/CMakeFiles/edit_cache.dir
-/root/HPC_labs/openMp/cmake-build-openmp/CMakeFiles/rebuild_cache.dir
