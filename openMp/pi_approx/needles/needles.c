@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
+#include <omp.h>
 #include "needles.h"
 
 typedef struct {
@@ -47,9 +48,24 @@ double cross_line(Needle needle, Floor floor){
     return x_right_tip > floor.l || x_left_tip < 0.0;
 }
 
-double estimate_prob_needle_crosses_line(int nb_tosses, Floor floor, double needle_lenght){
+double estimate_prob_needle_crosses_line_secuencial(int nb_tosses, Floor floor, double needle_lenght){
     int nb_crosses = 0;
     Needle needle;
+    for(int t = 1; t < nb_tosses; t++){
+        needle = toss_needle(needle_lenght, floor);
+//        printf("New needle tossed: %f %f\n", needle.x, needle.angle);
+        if(cross_line(needle, floor)){
+            nb_crosses++;
+        }
+    }
+//    printf("\n\n Number of crosses: %d\n", nb_crosses);
+    return (double) nb_crosses / nb_tosses;
+}
+
+double estimate_prob_needle_crosses_line_omp(int nb_tosses, Floor floor, double needle_lenght){
+    int nb_crosses = 0;
+    Needle needle;
+    #pragma omp parallel for
     for(int t = 1; t < nb_tosses; t++){
         needle = toss_needle(needle_lenght, floor);
 //        printf("New needle tossed: %f %f\n", needle.x, needle.angle);
@@ -72,7 +88,7 @@ void needle_secuencial(int *nb_tosses) {
     clock_t t;
     t = clock();
     // Estimate the probability that the needle crosses a line
-    double probability = estimate_prob_needle_crosses_line(*nb_tosses, floor, L);
+    double probability = estimate_prob_needle_crosses_line_secuencial(*nb_tosses, floor, L);
     t = clock() - t;
     double time_taken = ((double)t)/CLOCKS_PER_SEC; // in seconds
 
@@ -82,19 +98,17 @@ void needle_secuencial(int *nb_tosses) {
 
 
 void needle_omp(int *nb_tosses) {
+    double start;
+    double end;
     double L = 1.0;// Length of the needle
     Floor floor;
     floor.l = 2.0;  // Distance between the lines
 
     // Seed the random number generator with the current time
-    srand(time(NULL));
-    clock_t t;
-    t = clock();
+    start = omp_get_wtime();
     // Estimate the probability that the needle crosses a line
-    double probability = estimate_prob_needle_crosses_line(*nb_tosses, floor, L);
-    t = clock() - t;
-    double time_taken = ((double)t)/CLOCKS_PER_SEC; // in seconds
+    double probability = estimate_prob_needle_crosses_line_omp(*nb_tosses, floor, L);
+    end = omp_get_wtime();
 
-    // Print the result
-    printf("%d:%lf:%6lf:%f\n", *nb_tosses,1/probability, fabs(M_PI - 1/probability) * 100 / M_PI, time_taken);
+    printf("%d:%lf:%6lf:%f\n", *nb_tosses,1/probability, fabs(M_PI - 1/probability) * 100 / M_PI, end - start);
 }

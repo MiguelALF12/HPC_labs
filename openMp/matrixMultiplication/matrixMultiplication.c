@@ -80,7 +80,6 @@ void multiplyMatrixesSecuencial(const int *size,const int *verbose){
 }
 
 void multiplyMatrixesOmp(const int *size,const int *verbose){
-    clock_t t;
 
     //Dynamic memory allocation
     int n, i, j, k;
@@ -112,9 +111,6 @@ void multiplyMatrixesOmp(const int *size,const int *verbose){
             }
         }
     }
-
-//    t = clock() - t;
-//    double time_taken = ((double)t)/CLOCKS_PER_SEC; // in seconds
 
     end = omp_get_wtime();
     // Showing information if verbose

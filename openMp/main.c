@@ -29,7 +29,7 @@ int exe_api_approx(int argc, char *argv[]){
 
         if (strcmp(argv[1],"dartboard") == 0) {
 //            printf("tosses:measure:error:time\n");
-            monte_carlo_secuencial(&tosses, NULL);
+            monte_carlo_secuencial(&tosses);
         }
         else if(strcmp(argv[1],"needle") == 0){
 //            printf("tosses:measure:error:time");
@@ -38,13 +38,11 @@ int exe_api_approx(int argc, char *argv[]){
         else if(strcmp(argv[1],"dartboardP") == 0){
 //            monte_carlo_parallel(&tosses);
 //            printf("tosses:pi_approximation:error:time\n");
-// Not ready
-//            monte_carlo_omp(&tosses);
+            monte_carlo_omp(&tosses);
         }
         else if(strcmp(argv[1],"needleP") == 0){
 //            printf("tosses:measure:error:time");
-// Not ready
-//            needle_omp(&tosses);
+            needle_omp(&tosses);
         }
     }
     else{

@@ -4,6 +4,6 @@
 
 #ifndef OPENMP_DARTBOARD_H
 #define OPENMP_DARTBOARD_H
-int monte_carlo_secuencial(int *tosses, void* arg);
-int monte_carlo_omp(int *tosses, void* arg);
+int monte_carlo_secuencial(int *tosses);
+int monte_carlo_omp(int *tosses);
 #endif //OPENMP_DARTBOARD_H
